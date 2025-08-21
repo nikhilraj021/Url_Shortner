@@ -14,7 +14,8 @@ app.get("/", (req, res) => {
 })
 
 app.get('/url', (req, res) => {
-    res.render('form.ejs')
+    const heading = "URL Shortner";
+    res.render('form.ejs', {heading})
 })
 
 app.listen(PORT, () => {

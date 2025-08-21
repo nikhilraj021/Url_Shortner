@@ -11,7 +11,7 @@ export const connectDB = async () => {
   // OR
 
   await mongoose
-    .connect(process.env.MONGODB_URl)
+    .connect(process.env.MONGODB_URl, { dbName: "url_shortner" })
     .then(() => {
       console.log("DB Connected!!");
     })
