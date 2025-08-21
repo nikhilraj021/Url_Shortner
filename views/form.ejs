@@ -8,17 +8,22 @@
   </head>
   <body>
     <div>
-      <h1><%= heading %></h1>
       <!-- To write CSS in a File you have to create public folder with file -->
-      <form action="">
+      <form action="/short" method="POST">
         Paste URL :
         <input
           type="text"
-          name="LongUrl"
+          name="longUrl"
           placeholder="Enter the URL to shorten"
         />
         <button type="submit">Submit</button>
       </form>
+      <% if(shortUrl) { %>
+      <p>
+        Short Url : <a href="<%= shortUrl %>" target="_blank"/>
+        <%= shortUrl %>
+      </p>
+      <% } %>
     </div>
   </body>
 </html>
